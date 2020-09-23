@@ -1,0 +1,134 @@
+
+
+<html>
+    <head>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="httpVueLoader.js"></script>
+<style>
+
+
+body {
+  margin : 0;
+  background-color: white;
+}
+
+header {
+  width: 800px;
+  height: 50px;
+  background-color: red;
+}
+
+nav {
+  width: 800px;
+  height: 25px;
+  background-color: blue;
+}
+
+article {
+  width: 200px;
+  height: 600px;
+  background-color: green;
+  float: left;
+}
+
+main {
+  width: 400px;
+  height: 600px;
+  background-color: white;
+  float: left;
+}
+
+aside {
+  width: 200px;
+  height: 600px;
+  background-color: yellow;
+  float: left;
+}
+
+footer {
+  clear: both;
+  width: 800px;
+  height: 50px;
+  background-color: pink;
+}
+
+</style>
+        
+        
+    </head>
+    <body>
+    
+    <header>
+        ページヘッダー（サイトタイトル、メニューなど）
+        <nav>
+            サイトメニュー
+        </nav>
+    </header>
+    
+   <aside>
+    
+    <!-- サイドバー -->
+        <div id="app-4">
+		  <ol>
+		    <li v-for="todo in todos">
+		      {{ todo.text }}
+		    </li>
+		  </ol>
+		</div>
+    </aside>
+    
+    <main>
+
+
+        <div id="app">
+            {{ message }}
+        </div>
+        <div id="app-2">
+		  <span v-bind:title="message">
+		    Hover your mouse over me for a few seconds
+		    to see my dynamically bound title!
+		  </span>
+		</div>
+
+		
+		
+		  <div id="app5">
+
+		    <button v-on:click="openModal">Click</button>
+
+		    <div id="overlay" v-show="showContent">
+		        <div id="content">
+		          <p>これがモーダルウィンドウです。</p>
+		          <button v-on:click="closeModal">Close</button>
+		        </div>
+		    </div>
+		  </div>
+		  
+		  <div id="overlay" v-show="showContent" v-on:click="closeModal">
+
+
+    <div id="my-app">
+      <my-component></my-component>
+    </div>
+
+    <script type="text/javascript">
+      new Vue({
+        el: '#my-app',
+        components: {
+          'my-component': httpVueLoader('my-component.vue')
+        }
+      });
+    </script>
+    
+    
+    </main>
+
+    <footer>
+        ページフッター（メニュー、コピーライトなど）
+    </footer>
+        
+
+        <script src="page1.js"></script>
+    </body>
+</html>
