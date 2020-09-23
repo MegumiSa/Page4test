@@ -1,4 +1,4 @@
-# [DEMO](https://megumisa.github.io/Page4test/)
+# [DEMO](https://megumisa.github.io/Page4test/page2.html)
 
 ## Welcome to GitHub Pages
 
